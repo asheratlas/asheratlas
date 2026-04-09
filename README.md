@@ -2,7 +2,7 @@
 
 **I build AI products designed to survive unit economics.**
 
-Product leader with hands-on experience shipping a consumer-facing AI decision support tool from zero to open beta. I make real decisions about when to use an LLM, when JavaScript is the right answer, and how to build trust between users and systems that make recommendations.
+Product manager with hands-on experience shipping a consumer-facing AI decision support tool from zero to open beta. I make real decisions about when to use an LLM, when JavaScript is the right answer, and how to build trust between users and systems that make recommendations.
 
 ---
 
@@ -10,11 +10,11 @@ Product leader with hands-on experience shipping a consumer-facing AI decision s
 
 **[Atlas Realms](https://www.atlasrealms.com)** — An AI-powered decision support tool that helps groups find the right board game for their specific situation. Not a filter. Not a ranked list. A system that understands social context: who's at the table, how they want to feel, what kind of evening they're trying to have.
 
-The architecture is a hybrid: two LLMs handling what only language models can do (intent extraction and semantic enrichment), with deterministic JavaScript owning filtering, scoring, and explainability. Same query, same results, every time. Traceable reasons for every recommendation.
+The architecture is a hybrid: LLMs handle intent extraction and result explanation; deterministic JavaScript owns filtering, scoring, and explainability; pre-computed semantic embeddings (Gemini Embedding 001, 768-dim, stored in Cloudflare KV) extend vocabulary coverage for language the synonym dictionary can't reach — without adding LLM cost. Filtering, scoring, and ranking are fully deterministic. Traceable reasons for every recommendation.
 
 - **5–10s end-to-end latency** (down from 31–35s)
-- **~$0.0004 per query** (vs ~$0.08–0.40 for a pure LLM approach)
-- **100% consistency** on 10-prompt validation suite
+- **~$0.0012 per query** mid-tier (vs ~$0.08–0.40 for a pure LLM approach)
+- **100% on 10-prompt validation suite** (up from 62.5%) — deterministic scoring pipeline
 - **1,000+ games** enriched across 15 taxonomy dimensions using a 3-model consensus pipeline
 
 ---
@@ -26,13 +26,14 @@ Architecture documentation, scoring logic, product decisions, and production cod
 | Document | What it covers |
 |---|---|
 | [README](./README.md) | Architecture overview and real performance numbers |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | Full pipeline: all 7 nodes, filtering logic, design decisions |
+| [ARCHITECTURE.md](./ARCHITECTURE.md) | Full pipeline: all 8 nodes, filtering logic, design decisions |
 | [ADR_hybrid_llm_architecture.md](./ADR_hybrid_llm_architecture.md) | Why hybrid beats pure LLM: unit economics, consistency, explainability |
 | [SCORING_SYSTEM.md](./SCORING_SYSTEM.md) | How 14+ dimensions combine to rank results |
 | [PRODUCT_DECISIONS.md](./PRODUCT_DECISIONS.md) | The product thinking: assumptions, tests, reversals, and what changed |
 | [ENRICHMENT_PIPELINE.md](./ENRICHMENT_PIPELINE.md) | 3-model consensus pipeline for enriching a 1,100-item catalog |
-| [analytics/README.md](./analytics/README.md) | PostHog + GA4 dual tracking with UTM attribution in Framer |
-| [workers/api-proxy-worker.js](./workers/api-proxy-worker.js) | Cloudflare Worker: CORS proxy + KV-backed catalog cache |
+| [analytics/README.md](./analytics/README.md) | PostHog + GA4 dual analytics tracking — async initialization, UTM attribution, session-level event modeling (standalone Framer pattern) |
+| [workers/flowise-proxy.js](./workers/flowise-proxy.js) | Cloudflare Worker: CORS enforcement, routes requests to the Flowise pipeline |
+| [workers/catalog-cache.js](./workers/catalog-cache.js) | Cloudflare Worker: KV-backed game catalog cache, cron-triggered refresh |
 
 ---
 
@@ -50,7 +51,7 @@ Architecture documentation, scoring logic, product decisions, and production cod
 
 ## Background
 
-Building Atlas Realms allowed me to combine five years of board game domain expertise (800+ sales, 3,000+ titles catalogued) with the product management fundamentals I developed at eMusic — a digital music platform where I designed save cancellation journeys, recommendation systems, multi-currency checkout flows, and artist engagement features that drove measurable behavior change. It was also a deliberate choice to develop hands-on AI product skills by shipping something real, with real users, real costs, and real decisions about trust, explainability, and what "correct" means when the user is a group of people negotiating a game night.
+Building Atlas Realms allowed me to combine five years of board game domain expertise (800+ sales, 3,000+ titles catalogued) with the product management fundamentals I developed at TriPlay — a digital music platform where I designed save cancellation journeys, recommendation systems, multi-currency checkout flows, and artist engagement features that drove measurable behavior change. It was also a deliberate choice to develop hands-on AI product skills by shipping something real, with real users, real costs, and real decisions about trust, explainability, and what "correct" means when the user is a group of people negotiating a game night.
 
 ---
 
