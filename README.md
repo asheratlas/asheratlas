@@ -15,7 +15,7 @@ The architecture is a hybrid: LLMs handle intent extraction and result explanati
 - **5–10s end-to-end latency** (down from 31–35s)
 - **~$0.0012 per query** mid-tier (vs ~$0.08–0.40 for a pure LLM approach)
 - **100% on 10-prompt validation suite** (up from 62.5%) — deterministic scoring pipeline; the suite is small, consistency is an ongoing engineering discipline not a fixed ceiling
-- **1,000+ games** enriched across 15 taxonomy dimensions using a 3-model consensus pipeline
+- **1,000+ games** enriched across 16+ taxonomy dimensions using a 3-model consensus pipeline
 
 ---
 
