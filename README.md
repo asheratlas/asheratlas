@@ -26,7 +26,7 @@ Architecture documentation, scoring logic, product decisions, and production cod
 | Document | What it covers |
 |---|---|
 | [README](./README.md) | Architecture overview and real performance numbers |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | Full pipeline: all 8 nodes, filtering logic, design decisions |
+| [ARCHITECTURE.md](./atlas-realms-portfolio/ARCHITECTURE.md) | Full pipeline: all 8 nodes, filtering logic, design decisions |
 | [ADR_hybrid_llm_architecture.md](./ADR_hybrid_llm_architecture.md) | Why hybrid beats pure LLM: unit economics, consistency, explainability |
 | [SCORING_SYSTEM.md](./SCORING_SYSTEM.md) | How 14+ dimensions combine to rank results |
 | [PRODUCT_DECISIONS.md](./PRODUCT_DECISIONS.md) | The product thinking: assumptions, tests, reversals, and what changed |
