@@ -25,15 +25,15 @@ Architecture documentation, scoring logic, product decisions, and production cod
 
 | Document | What it covers |
 |---|---|
-| [README](./README.md) | Architecture overview and real performance numbers |
+| [README](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/README.md) | Architecture overview and real performance numbers |
 | [ARCHITECTURE.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/ARCHITECTURE.md) | Full pipeline: all 8 nodes, filtering logic, design decisions |
-| [ADR_hybrid_llm_architecture.md](./ADR_hybrid_llm_architecture.md) | Why hybrid beats pure LLM: unit economics, consistency, explainability |
-| [SCORING_SYSTEM.md](./SCORING_SYSTEM.md) | How 14+ dimensions combine to rank results |
-| [PRODUCT_DECISIONS.md](./PRODUCT_DECISIONS.md) | The product thinking: assumptions, tests, reversals, and what changed |
-| [ENRICHMENT_PIPELINE.md](./ENRICHMENT_PIPELINE.md) | 3-model consensus pipeline for enriching a 1,100-item catalog |
-| [analytics/README.md](./analytics/README.md) | PostHog + GA4 dual analytics tracking — async initialization, UTM attribution, session-level event modeling (standalone Framer pattern) |
-| [workers/flowise-proxy.js](./workers/flowise-proxy.js) | Cloudflare Worker: CORS enforcement, routes requests to the Flowise pipeline |
-| [workers/catalog-cache.js](./workers/catalog-cache.js) | Cloudflare Worker: KV-backed game catalog cache, cron-triggered refresh |
+| [ADR_hybrid_llm_architecture.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/ADR_hybrid_llm_architecture.md) | Why hybrid beats pure LLM: unit economics, consistency, explainability |
+| [SCORING_SYSTEM.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/SCORING_SYSTEM.md) | How 14+ dimensions combine to rank results |
+| [PRODUCT_DECISIONS.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/PRODUCT_DECISIONS.md) | The product thinking: assumptions, tests, reversals, and what changed |
+| [ENRICHMENT_PIPELINE.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/ENRICHMENT_PIPELINE.md) | 3-model consensus pipeline for enriching a 1,100-item catalog |
+| [analytics/README.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/analytics/README.md) | PostHog + GA4 dual analytics tracking — async initialization, UTM attribution, session-level event modeling (standalone Framer pattern) |
+| [workers/flowise-proxy.js](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/workers/flowise-proxy.js) | Cloudflare Worker: CORS enforcement, routes requests to the Flowise pipeline |
+| [workers/catalog-cache.js](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/workers/catalog-cache.js) | Cloudflare Worker: KV-backed game catalog cache, cron-triggered refresh |
 
 ---
 
