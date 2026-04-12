@@ -58,7 +58,11 @@ Building Atlas Realms allowed me to combine five years of board game domain expe
 ## Contact
 
 **Email:** asher@asheratlas.com
-**LinkedIn:** [linkedin.com/in/asheratlas](https://linkedin.com/in/asheratlas)  
+
+**LinkedIn:** [linkedin.com/in/asheratlas](https://linkedin.com/in/asheratlas)
+
 **Portfolio Site:** [asheratlas.com](https://www.asheratlas.com)
-**Live product:** [atlasrealms.com](https://www.atlasrealms.com)  
+
+**Live product:** [atlasrealms.com](https://www.atlasrealms.com)
+
 **Location:** New York, NY
