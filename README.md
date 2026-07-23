@@ -1,68 +1,94 @@
 # Asher "Ashi" Atlas
 
-**I build AI products designed to survive unit economics.**
+**From problem to working product.**
 
-Product manager with hands-on experience shipping a consumer-facing AI decision support tool from zero to open beta. I make real decisions about when to use an LLM, when JavaScript is the right answer, and how to build trust between users and systems that make recommendations.
+I'm a Senior Product Manager with eight years leading consumer platforms, directly building working products that span deterministic systems and evaluated AI products. I enter before the solution is clear, determine what should be built, and take it through validation and launch. The technology follows the problem — sometimes AI creates meaningful value; sometimes conventional software is the more reliable answer.
 
----
+## Selected Commercial Proof
 
-## What I've Built
+Team and company outcomes from commercial product leadership — not solo builds:
 
-**[Atlas Realms](https://www.atlasrealms.com)** — An AI-powered decision support tool that helps groups find the right board game for their specific situation. Not a filter. Not a ranked list. A system that understands social context: who's at the table, how they want to feel, what kind of evening they're trying to have.
+- Eight years in product leadership
+- eMusic Live: concept to 100+ events
+- Platform capacity scaled from 2K to 8K concurrent viewers before a major festival
+- Multi-currency checkout expanded from 4 to 120+ currencies
+- Search/discovery rebuild increased album purchases by 15% after a roughly 30% catalog loss
 
-The architecture is a hybrid: LLMs handle intent extraction and result explanation; deterministic JavaScript owns filtering, scoring, and explainability; pre-computed semantic embeddings (Gemini Embedding 001, 768-dim, stored in Cloudflare KV) extend vocabulary coverage for language the synonym dictionary can't reach — without adding LLM cost. Filtering, scoring, and ranking are fully deterministic. Traceable reasons for every recommendation.
+## Products I Built Directly
 
-- **5–10s end-to-end latency** (down from 31–35s)
-- **~$0.0012 per query** mid-tier gamers (main user segmentation)
-- **100% on 10-prompt validation suite** (up from 62.5%) — deterministic scoring pipeline; the suite is small, consistency is an ongoing engineering discipline not a fixed ceiling
-- **1,000+ games** enriched across 16+ taxonomy dimensions using a 3-model consensus pipeline
+### Atlas Trade — Multi-Party Board Game Trading Platform
 
----
+**[GitHub Repository](https://github.com/asheratlas/atlas-trade-portfolio)**
 
-## This Repository
+Board game communities run math trades — multi-party exchange events where circular trade loops are computed algorithmically. The incumbent tool's matching works, but its browse, assignment, and submit flows drive new participants away.
 
-Architecture documentation, scoring logic, product decisions, and production code artifacts — without the proprietary data and infrastructure. Everything in this repo is designed to be read, not run.
+**Defining decision:** Fix broken UX flows, not the algorithm. TradeMaximizer (MIT, Chris Okasaki) owns matching; I built the surrounding product. The core trading workflow is deterministic and does not depend on AI.
 
-| Document | What it covers |
-|---|---|
-| [README](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/README.md) | Architecture overview and real performance numbers |
-| [ARCHITECTURE.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/ARCHITECTURE.md) | Full pipeline: all 8 nodes, filtering logic, design decisions |
-| [ADR_hybrid_llm_architecture.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/ADR_hybrid_llm_architecture.md) | Why hybrid beats pure LLM: unit economics, consistency, explainability |
-| [SCORING_SYSTEM.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/SCORING_SYSTEM.md) | How 14+ dimensions combine to rank results |
-| [PRODUCT_DECISIONS.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/PRODUCT_DECISIONS.md) | The product thinking: assumptions, tests, reversals, and what changed |
-| [ENRICHMENT_PIPELINE.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/ENRICHMENT_PIPELINE.md) | 3-model consensus pipeline for enriching a 1,100-item catalog |
-| [analytics/README.md](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/analytics/README.md) | PostHog + GA4 dual analytics tracking — async initialization, UTM attribution, session-level event modeling (standalone Framer pattern) |
-| [workers/flowise-proxy.js](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/workers/flowise-proxy.js) | Cloudflare Worker: CORS enforcement, routes requests to the Flowise pipeline |
-| [workers/catalog-cache.js](https://github.com/asheratlas/atlas-realms-portfolio/blob/main/workers/catalog-cache.js) | Cloudflare Worker: KV-backed game catalog cache, cron-triggered refresh |
+- **Completed first live pilot:** ~40 participants, 732 items catalogued, with modern catalog browse and per-game assignment panels
+- **Historical replay validation:** 78/79 trade loops verified; both systems produced trades for the same 26 users on the replay data — distinct from the live pilot outcome
+- **Email-only authentication** replaced the BGG account requirement that blocked new participants
 
----
+First live pilot complete; updating from pilot feedback before the next trade. An external organizer has joined as a design partner and is preparing to use the platform for future trades.
 
-## How I Think About AI Products
+### Atlas Realms — AI Recommendation System for Group Board Game Decisions
 
-**Use LLMs for what they're uniquely good at.** Natural language understanding, fuzzy intent extraction, filling gaps where structured data doesn't exist. Not for sorting, filtering, or explaining results — those jobs belong to deterministic code.
+**[Live Product](https://www.atlasrealms.com) · [GitHub Repository](https://github.com/asheratlas/atlas-realms-portfolio)**
 
-**Design for consistency from the start.** A recommendation system that returns different results for the same input is a product that users can't trust. Consistency is an engineering constraint, not a nice-to-have.
+Groups struggle to pick the right board game for a specific table — different players, time budgets, and experience levels. Atlas Realms turns a natural-language situation into a ranked shortlist with explainable reasons.
 
-**Unit economics are a product constraint.** If the cost per query doesn't work at the scale you're targeting, the architecture is wrong — not the pricing. Build with real numbers from the beginning.
+**Defining decision:** Models judge where language interpretation matters; code enforces every mechanical constraint. Validation rebuilt around casual players after early feedback overrepresented power users.
 
-**Real users break things that structured tests don't.** The most valuable feedback I've collected came from watching people use the product in ways I never designed for. Ship to real users as early as possible, with the right instrumentation to learn from what they do.
+- **5–10s end-to-end latency**, down from 31–35s (~78% reduction through caching and architecture changes)
+- **~$0.0012 per query** for the main user segment through cost engineering
+- **100% consistency** on a 10-prompt regression suite (regression discipline, not a universal accuracy claim)
 
----
+### Career Copilot — Evidence-First AI Career System
 
-## Background
+**[GitHub Repository](https://github.com/asheratlas/career-copilot-portfolio)**
 
-Building Atlas Realms allowed me to combine five years of board game domain expertise (800+ sales, 3,000+ titles catalogued) with the product management fundamentals I developed at TriPlay — a digital music platform where I designed save cancellation journeys, recommendation systems, multi-currency checkout flows, and artist engagement features that drove measurable behavior change. It was also a deliberate choice to develop hands-on AI product skills by shipping something real, with real users, real costs, and real decisions about trust, explainability, and what "correct" means when the user is a group of people negotiating a game night.
+PM job search mixes slow profile construction with fast per-role tailoring — and most AI resume tools hallucinate experience or silently drop gaps. Career Copilot separates knowledge building from per-job work and keeps every claim tied to approved evidence.
 
----
+**Defining decision:** Verbatim evidence selection by ID with human approval — no hallucinated experience, no silent omissions, gap flags for every unsupported requirement.
+
+- **13-JD regression set** with ~9–11/13 directional agreement on founder-labeled ground truth
+- **11 completed model responses compared** on failure severity rather than benchmark averages
+- **~$0.019 cold / ~$0.013 warm per tailoring**, down from ~$0.042 through model selection and caching
+
+First external product manager actively testing in private beta.
+
+Currently building: an AI-assisted invoicing pilot for an operating business — message capture, constrained extraction, deterministic tax math, human review before anything is issued.
+
+## Products I Led at Commercial Scale
+
+### eMusic Live — 0→1 Livestream Commerce Platform
+
+Led concept-to-launch with real engineering teams, stakeholders, and operational workflows across 100+ live events. Owned product definition, user experience, payments integration, and ongoing optimization ahead of major festival launches.
+
+### eMusic — Multi-Currency Subscription Platform Modernization
+
+Shipped multi-currency checkout and led retention, monetization, and fraud prevention over multiple years in a commercial environment with real engineering constraints and stakeholder accountability.
+
+## How I Work
+
+**Decode the problem before choosing the solution.** Research the existing process and validate pain before defining what to build.
+
+**Use models for judgment, code for invariants.** AI handles language understanding; deterministic code owns rules that must never fail.
+
+**Evaluate failure severity, not averages.** Build regression suites around the failures that break user trust.
+
+**Unit economics are architecture.** If model cost doesn't work at intended usage, the product design isn't finished.
+
+**Validate with the right users against real data.** Power users and casual users diverge; mock data hides integration failures.
+
+**Scope discipline saves projects.** Defend the core mission; change course when evidence wins.
+
+## Currently
+
+Senior product leadership day job. Independent products in active use and private beta. Open to senior product leadership opportunities and selective product-building collaborations where the scope and operating model are compatible.
 
 ## Contact
 
-**Email:** asher@asheratlas.com
-
-**LinkedIn:** [linkedin.com/in/asheratlas](https://linkedin.com/in/asheratlas)
-
-**Portfolio Site:** [asheratlas.com](https://www.asheratlas.com)
-
-**Live product:** [atlasrealms.com](https://www.atlasrealms.com)
-
+**Email:** [asher@asheratlas.com](mailto:asher@asheratlas.com)  
+**LinkedIn:** [linkedin.com/in/asheratlas](https://linkedin.com/in/asheratlas)  
+**Portfolio:** [https://www.asheratlas.com](https://www.asheratlas.com)  
 **Location:** New York, NY
