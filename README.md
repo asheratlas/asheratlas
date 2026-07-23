@@ -14,6 +14,32 @@ Team and company outcomes from commercial product leadership — not solo builds
 - Multi-currency checkout expanded from 4 to 120+ currencies
 - Search/discovery rebuild increased album purchases by 15% after a roughly 30% catalog loss
 
+## Products I Led at Commercial Scale
+
+These were company products delivered with engineering, design, marketing, finance, customer success, and external partner teams — not solo builds. Together, they show both sides of product leadership: creating a new platform from zero and improving an established commercial product over time.
+
+### eMusic Live — 0→1 Livestream Commerce and Artist Platform
+
+eMusic Live turned digital concerts into complete commercial events rather than simple video streams. Fans could buy access, bundles, VIP experiences, and merchandise; interact with artists during shows; and move through timezone-aware event journeys. Artists, promoters, vendors, and internal teams needed tools to configure, operate, fulfill, and measure each event.
+
+**My scope:** Led product from concept through launch and ongoing operation across ticketing, global payments, merchandise fulfillment, artist tooling, fan engagement, event-page publishing, analytics, and platform reliability.
+
+- **Took the platform from concept to 100+ live events**, coordinating cross-functional and partner teams across product definition, delivery, launch, and post-event learning
+- **Changed the roadmap after load testing exposed a 2K concurrent-viewer ceiling**, built the case for reliability work, and led the team to 8K concurrent viewers with zero load-related downtime during a three-day festival
+- **Expanded global checkout from 4 to 120+ currencies** while keeping prices stable for buyers and reconciliation manageable for Finance
+- **Built beyond video delivery:** artist-fan interaction, mobile-first viewing, ticket and merchandise bundles, vendor order routing, self-service event-page creation, and behavioral analytics
+
+### eMusic — Global Digital Music Subscription and Commerce Platform
+
+eMusic was an established buy-to-own digital music service spanning responsive web and native iOS and Android applications. Product ownership covered the complete customer and commercial system: acquisition, subscription lifecycle, pricing, checkout, catalog discovery, recommendations, mobile-platform constraints, fraud prevention, and executive business intelligence.
+
+**My scope:** Owned and improved the product across engineering, mobile, marketing, finance, support, data, and executive stakeholders — balancing customer experience, platform policy, revenue, operating cost, and a changing music catalog.
+
+- **Turned a roughly 30% catalog loss into a discovery rebuild** that replaced dead-end searches with relevant alternatives and increased album purchases by 15%
+- **Redesigned cancellation around customer reasons and targeted alternatives**, doubling subscription save rates while producing structured insight into why customers left
+- **Led pricing, acquisition, and conversion experimentation** across subscription tiers, album landing pages, and checkout rather than treating growth as a separate marketing function
+- **Improved the operating system around the product:** rules-based fraud controls, chargeback workflows, cross-platform feature strategy, App Store payment-policy workarounds, and recurring subscriber/revenue/churn reporting
+
 ## Products I Built Directly
 
 ### Atlas Trade — Multi-Party Board Game Trading Platform
@@ -57,16 +83,6 @@ PM job search mixes slow profile construction with fast per-role tailoring — a
 First external product manager actively testing in private beta.
 
 Currently building: an AI-assisted invoicing pilot for an operating business — message capture, constrained extraction, deterministic tax math, human review before anything is issued.
-
-## Products I Led at Commercial Scale
-
-### eMusic Live — 0→1 Livestream Commerce Platform
-
-Led concept-to-launch with real engineering teams, stakeholders, and operational workflows across 100+ live events. Owned product definition, user experience, payments integration, and ongoing optimization ahead of major festival launches.
-
-### eMusic — Multi-Currency Subscription Platform Modernization
-
-Shipped multi-currency checkout and led retention, monetization, and fraud prevention over multiple years in a commercial environment with real engineering constraints and stakeholder accountability.
 
 ## How I Work
 
