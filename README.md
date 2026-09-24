@@ -1,8 +1,8 @@
 # Asher "Ashi" Atlas
 
-**From problem to working product.**
+**I lead products, and I build them.**
 
-I'm a Senior Product Manager with eight years leading consumer platforms, directly building working products that span deterministic systems and evaluated AI products. I enter before the solution is clear, determine what should be built, and take it through validation and launch. The technology follows the problem — sometimes AI creates meaningful value; sometimes conventional software is the more reliable answer.
+Eight years leading consumer products at TriPlay, including a marketplace for music rights that I'm taking to market now. Independently: Atlas Trade, a live product for organizers and participants, and two AI products, Ask Atlas and Career Copilot.
 
 ## Selected Commercial Proof
 
@@ -46,15 +46,9 @@ eMusic was an established buy-to-own digital music service spanning responsive w
 
 **[GitHub Repository](https://github.com/asheratlas/atlas-trade-portfolio)**
 
-Board game communities run math trades — multi-party exchange events where circular trade loops are computed algorithmically. The incumbent tool's matching works, but its browse, assignment, and submit flows drive new participants away.
+The community tool is seventeen years old. It works, and first-timers quit halfway. I kept the matching algorithm and rebuilt the flows around it.
 
-**Defining decision:** Fix broken UX flows, not the algorithm. TradeMaximizer (MIT, Chris Okasaki) owns matching; I built the surrounding product. The core trading workflow is deterministic and does not depend on AI.
-
-- **Completed first live pilot:** ~40 participants, 732 items catalogued, with modern catalog browse and per-game assignment panels
-- **Historical replay validation:** 78/79 trade loops verified; both systems produced trades for the same 26 users on the replay data — distinct from the live pilot outcome
-- **Email-only authentication** replaced the BGG account requirement that blocked new participants
-
-First live pilot complete; updating from pilot feedback before the next trade. An external organizer has joined as a design partner and is preparing to use the platform for future trades.
+Finding a game and deciding what you'd give for it turned out to be different jobs. Newcomers, veterans, and the organizer get different controls in the same product. Spring 2026: 86% of people who listed an item ended up in a trade. The prior NYC trade, on the old tool, was 63%, with different people and different games. After the Summer trade, a short survey changed the fix I was about to build.
 
 ### Atlas Realms — AI Recommendation System for Group Board Game Decisions
 
@@ -65,8 +59,10 @@ Groups struggle to pick the right board game for a specific table — different 
 **Defining decision:** Models judge where language interpretation matters; code enforces every mechanical constraint. Validation rebuilt around casual players after early feedback overrepresented power users.
 
 - **5–10s end-to-end latency**, down from 31–35s (~78% reduction through caching and architecture changes)
-- **~$0.0012 per query** for the main user segment through cost engineering
+- **~$0.0016 per query**, weighted across the recorded query mix (August 2026)
 - **100% consistency** on a 10-prompt regression suite (regression discipline, not a universal accuracy claim)
+
+Ask Atlas is the recommendation engine. Atlas Trade is the other product on the same site.
 
 ### Career Copilot — Evidence-First AI Career System
 
@@ -80,9 +76,7 @@ PM job search mixes slow profile construction with fast per-role tailoring — a
 - **11 completed model responses compared** on failure severity rather than benchmark averages
 - **~$0.019 cold / ~$0.013 warm per tailoring**, down from ~$0.042 through model selection and caching
 
-First external product manager actively testing in private beta.
-
-Currently building: an AI-assisted invoicing pilot for an operating business — message capture, constrained extraction, deterministic tax math, human review before anything is issued.
+Closed pilot.
 
 ## How I Work
 
@@ -100,7 +94,7 @@ Currently building: an AI-assisted invoicing pilot for an operating business —
 
 ## Currently
 
-Senior product leadership day job. Independent products in active use and private beta. Open to senior product leadership opportunities and selective product-building collaborations where the scope and operating model are compatible.
+Director of Product at TriPlay, bringing a music-rights marketplace to market. Atlas Trade, Ask Atlas, and Career Copilot are in use beside that. Open to senior product roles, and to building with someone whose problem is still a mess.
 
 ## Contact
 
