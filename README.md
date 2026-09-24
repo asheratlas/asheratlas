@@ -44,7 +44,7 @@ eMusic was an established buy-to-own digital music service spanning responsive w
 
 ### Atlas Trade — Multi-Party Board Game Trading Platform
 
-**[GitHub Repository](https://github.com/asheratlas/atlas-trade-portfolio)**
+**[Live Product](https://www.atlasrealms.com/trade) · [GitHub Repository](https://github.com/asheratlas/atlas-trade-portfolio)**
 
 The community tool is seventeen years old. It works, and first-timers quit halfway. I kept the matching algorithm and rebuilt the flows around it.
 
